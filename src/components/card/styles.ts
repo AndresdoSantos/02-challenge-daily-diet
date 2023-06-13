@@ -1,11 +1,15 @@
 import styled, { css } from 'styled-components/native'
 import { Feather } from '@expo/vector-icons'
+import Animated from 'react-native-reanimated'
+import { Pressable } from 'react-native'
 
 type RootContainerProps = {
   variant: 'green.light' | 'gray.light' | 'red.light'
 }
 
-export const RootContainer = styled.Pressable<RootContainerProps>`
+export const AnimatedPressable = Animated.createAnimatedComponent(Pressable)
+
+export const RootContainer = styled(AnimatedPressable)<RootContainerProps>`
   padding-top: 20px;
   padding-bottom: 20px;
   padding-right: 16px;

@@ -1,4 +1,6 @@
 import { PressableProps, TextProps } from 'react-native'
+import Animated from 'react-native-reanimated'
+import { ComponentProps } from 'react'
 
 import {
   ArrowContainer,
@@ -7,13 +9,14 @@ import {
   RootTitle,
 } from './styles'
 
-type RootProps = PressableProps & {
-  variant: 'green.light' | 'gray.light' | 'red.light'
-}
+type RootProps = PressableProps &
+  ComponentProps<typeof Animated.View> & {
+    variant: 'green.light' | 'gray.light' | 'red.light'
+  }
 
-function Root({ variant, children, ...props }: RootProps) {
+function Root({ variant, children, entering, ...props }: RootProps) {
   return (
-    <RootContainer variant={variant} {...props}>
+    <RootContainer variant={variant} entering={entering} {...props}>
       {children}
     </RootContainer>
   )
