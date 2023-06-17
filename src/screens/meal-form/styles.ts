@@ -60,7 +60,7 @@ const InsideTheDietButtonRoot = styled.Pressable<InsideTheDietButtonRootProps>`
   flex: 1;
 
   ${({ type, theme }) => {
-    if (type === undefined) {
+    if (!type) {
       return css`
         background-color: ${theme.colors.gray[6]};
         border: 1px solid ${theme.colors.gray[6]};

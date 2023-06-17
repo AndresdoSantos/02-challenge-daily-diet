@@ -31,7 +31,7 @@ const SectionListTitle = styled.Text`
   margin-bottom: 8px;
 `
 
-const SectionListContent = styled.View`
+const SectionListContent = styled.Pressable`
   padding-left: 12px;
   padding-top: 14px;
   padding-bottom: 14px;

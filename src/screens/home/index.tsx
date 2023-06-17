@@ -30,7 +30,7 @@ export function Home() {
 
       <S.Title>Refeições</S.Title>
 
-      <Button.Root onPress={() => navigate('new-meal-form')}>
+      <Button.Root onPress={() => navigate('meal-form')}>
         <Button.Icon name="plus" />
         <Button.Title>Nova refeição</Button.Title>
       </Button.Root>
@@ -65,7 +65,9 @@ export function Home() {
           <S.SectionListTitle>{section.title}</S.SectionListTitle>
         )}
         renderItem={({ item }) => (
-          <S.SectionListContent>
+          <S.SectionListContent
+            onPress={() => navigate('meal-form', { id: item.id })}
+          >
             <S.SectionListContentHour>{item.hour}</S.SectionListContentHour>
             <S.SectionListContentSeparator />
             <S.SectionListContentTitle>{item.name}</S.SectionListContentTitle>

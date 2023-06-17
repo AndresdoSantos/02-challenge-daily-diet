@@ -3,8 +3,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import { Home } from '../screens/home'
 import { DietDetails } from '../screens/diet-details'
-import { NewMealForm } from '../screens/new-meal-form'
-import { Profile } from '../screens/profile'
+import { MealForm } from '../screens/meal-form'
+import { Feedback } from '../screens/feedback'
 
 const { Navigator, Screen } = createNativeStackNavigator()
 
@@ -17,8 +17,8 @@ export function AppRouter() {
       >
         <Screen name="home" component={Home} />
         <Screen name="diet-details" component={DietDetails} />
-        <Screen name="new-meal-form" component={NewMealForm} />
-        <Screen name="profile" component={Profile} />
+        <Screen name="meal-form" component={MealForm} />
+        <Screen name="feedback" component={Feedback} />
       </Navigator>
     </NavigationContainer>
   )
